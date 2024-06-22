@@ -1,23 +1,23 @@
 class Solution {
 public:
     int numberOfSubarrays(vector<int>& nums, int k) {
-        vector<int> prefix(nums.size(),0);
-        for(int i=0;i<nums.size();i++){
-              if(i == 0){
-                if(nums[i] % 2)prefix[i]++;
-                continue;
-              }
-              prefix[i]=prefix[i-1]+(nums[i] % 2);
-        }
-     
-        
-        map<int,int> mp;
-        mp[0]++;
+        queue<int> q;
+        int gap=-1;
         int ans=0;
+        int last=-1;
         for(int i=0;i<nums.size();i++){
-             ans+=mp[prefix[i]-k];
-             mp[prefix[i]]++;
+            if(nums[i] % 2)q.push(i);
+
+            if(q.size() > k){
+                last=q.front();
+                q.pop();
+            }
+            if(q.size() == k){
+                 gap=q.front()-last;
+                 ans+=gap;
+            }
         }
         return ans;
+        
     }
 };
