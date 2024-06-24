@@ -9,7 +9,7 @@ public:
                         if(i+k-1 >= nums.size())return -1;
                         flips++;
                         count++;
-                        nums[i]=-1;
+                        nums[i]=1;
                    }else{
                       nums[i]=0;
                    }
@@ -18,13 +18,13 @@ public:
                       if(i+k-1 >= nums.size()) return -1;
                       flips++;
                       count++;
-                      nums[i]=-1;
+                      nums[i]=1;
                   }else{
                      nums[i]=0;
                   }
               }
               if(i - k+1>=0){
-                flips+=nums[i-k+1];
+                flips-=nums[i-k+1];
               }
               cout<<flips<<"\n";
         }
