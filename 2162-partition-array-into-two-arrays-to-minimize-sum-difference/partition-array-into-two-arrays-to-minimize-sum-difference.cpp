@@ -29,19 +29,8 @@ public:
               arr[count].insert(sum);
 
         }
-        cout<<"anul lo"<<anuj<<endl;
         int cnt=0;
-        // for(auto &i:arr) 
-        // {
-        //     cout<<cnt<<"--->";
-        //     cnt++;
-        //     for(auto &j:i) 
-        //     {
-                
-        //         cout<<j<<" ";
-        //     }
-        //     cout<<endl;
-        // }
+   
         int mini=INT_MAX;
 
       
@@ -58,7 +47,6 @@ public:
                    index++;
                    val=val/2;
               }
-            //   cout<<sum<<" ";
               
 
               int count = __builtin_popcount(mask);
