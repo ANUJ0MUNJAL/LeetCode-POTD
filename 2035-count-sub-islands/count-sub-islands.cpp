@@ -87,7 +87,7 @@ void dfs2(vector<vector<int>>&grid,DisjointSet &ds,vector<vector<int>>&grid1,int
       if(row >= grid.size() || row < 0 || col >= grid[0].size() || col < 0 || grid[row][col]==0)return;
       if(grid1[row][col]==0)
       {
-        cout<<row<<" "<<col<<"\n";
+       
         flag=false;
       }
       
