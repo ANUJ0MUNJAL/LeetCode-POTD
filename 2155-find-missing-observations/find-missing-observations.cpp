@@ -14,7 +14,7 @@ public:
         {
              ans[i]++;
              i++;
-             if(i >= ans.size())i=0;
+           
         }
         return ans;
     }
