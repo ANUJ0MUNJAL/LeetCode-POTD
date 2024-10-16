@@ -1,7 +1,7 @@
 class Solution {
 public:
     string longestDiverseString(int a, int b, int c) {
-        //using max heap
+      
         priority_queue<pair<int,char>>pq;
         if(a)
         pq.push({a,'a'});
