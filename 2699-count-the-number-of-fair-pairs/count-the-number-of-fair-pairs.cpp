@@ -20,11 +20,6 @@ template<class T> void Sore(vector<T> &v) {sort(v.begin(),v.end(),[](T x,T y){re
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 typedef tree<long long, null_type, less_equal<long long>, rb_tree_tag, tree_order_statistics_node_update> ordered_multiset;
 typedef tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update> ordered_pset;
-
-// lower <= nums[i] + nums[j]
-// lower - nums[i] <= nums[j]
-// nums[j] > 
-
 class Solution {
 public:
     long long countFairPairs(vector<int>& nums, int lower, int upper) {
