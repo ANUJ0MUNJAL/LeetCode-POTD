@@ -4,13 +4,11 @@ public:
         int rows = grid.size();
         int cols = grid[0].size();
         
-        // Priority queue to store {cost, x, y}
         priority_queue<array<int, 3>, vector<array<int, 3>>, greater<array<int, 3>>> pq;
         pq.push({0, 0, 0});
         
         vector<vector<int>> visited(rows, vector<int>(cols, 0));
         
-        // Direction arrays for [1 -> right, 2 -> left, 3 -> down, 4 -> up]
         vector<int> dx = {0, 0, 1, -1};
         vector<int> dy = {1, -1, 0, 0};
         
@@ -21,8 +19,7 @@ public:
             int cost = el[0];
             int x = el[1];
             int y = el[2];
-            
-            // Mark as visited
+           
             if (visited[x][y]) continue;
             visited[x][y] = 1;
             
