@@ -20,16 +20,6 @@ public:
        
             
           }
-
-          for(auto j: mp)
-          {
-              cout<<j.first<<"-->";
-              for(auto i: j.second)
-              {
-                cout<<i<<" ";
-              }
-              cout<<"\n";
-          }
           vector<string> answer;
           queue<string> q;
           for(auto j: supplies)q.push(j);
