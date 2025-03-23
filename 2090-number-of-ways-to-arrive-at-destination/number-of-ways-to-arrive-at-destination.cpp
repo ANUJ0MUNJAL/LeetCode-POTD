@@ -20,10 +20,10 @@ public:
         priority_queue<pll, vector<pll>, greater<>> minHeap;
         minHeap.push({0, 0});
         vector<int> visited(n,0);
-        visited[0]=1;
+     
         while (!minHeap.empty()) {
             auto[d, u] = minHeap.top(); minHeap.pop();
-            if (d > dist[u]) continue;
+            if (d > dist[u] or visited[u]) continue;
             visited[u]=1;
             for(auto [v, time] : graph[u]) {
                 
