@@ -19,14 +19,20 @@ public:
         dist[src] = 0;
         priority_queue<pll, vector<pll>, greater<>> minHeap;
         minHeap.push({0, 0});
+        vector<int> visited(n,0);
+        visited[0]=1;
         while (!minHeap.empty()) {
             auto[d, u] = minHeap.top(); minHeap.pop();
             if (d > dist[u]) continue;
+            visited[u]=1;
             for(auto [v, time] : graph[u]) {
-                if (dist[v] > d + time) {
+                
+                if (!visited[v] and dist[v] > d + time) {
                     dist[v] = d + time;
                     ways[v] = ways[u];
+                   
                     minHeap.push({dist[v], v});
+                    
                 } else if (dist[v] == d + time) {
                     ways[v] = (ways[v] + ways[u]) % MOD;
                 }
