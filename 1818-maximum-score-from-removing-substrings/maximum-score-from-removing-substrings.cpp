@@ -4,7 +4,7 @@ public:
           int ans=0;
         stack<int> st;
         int count=0;
-    if(x > y){
+    if(x >= y){
         for(int i=0;i<s.length();i++){
              while(!st.empty() and s[st.top()]=='a' and s[i]=='b'){
                  st.pop();
