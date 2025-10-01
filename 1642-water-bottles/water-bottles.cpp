@@ -8,7 +8,6 @@ public:
              numBottles/=numExchange;
              
              numBottles+=khali/numExchange;
-             cout<<khali<<"\n";
              khali%=numExchange;
               
          }
