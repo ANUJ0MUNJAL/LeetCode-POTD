@@ -36,7 +36,6 @@ public:
 
             string a = solve(temp,n);
 
-            cout<<a<<endl;
 
             for(int j=0;j<a.length();j++)
             {
